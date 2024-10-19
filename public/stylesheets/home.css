@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f2f2f2;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #595959;
+    padding: 15px;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+    border: 2px solid #ffffff;
+    border-radius: 0.5rem;
+    padding: 0.1rem;
+}
+
+.app-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.logout-btn {
+    background-color: #595959;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.logout-btn:hover {
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    color: #595959;
+}
+
+.main-content {
+    display: flex;
+    padding: 2rem 1rem;
+    flex-grow: 1;
+    justify-content: space-between;
+    height: 90vh;
+}
+
+.previous-questions {
+    background-color: #595959;
+    padding: 1rem;
+    margin: 0.5rem 0.5rem 5rem 0.5rem;
+    width: 25%;
+    height: 100%;
+    border-radius: 8px;
+    overflow-y: auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.previous-questions h3 {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.previous-questions h4 {
+    color: #ffbc42;
+    margin: 1rem 0 0.5rem 0;
+}
+
+#questions-list {
+    list-style-type: none;
+}
+
+#questions-list li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    color: #595959;
+    height: 4rem;
+    overflow-y: scroll;
+}
+
+.prev-questions-value {
+    line-height: 1.6;
+}
+
+.prev-questions-date {
+    font-weight: bolder;
+    color: black;
+}
+
+.chat-interface {
+    background-color: #f2f2f2;
+    padding: 0 5rem;
+    width: 75%;
+    height: 100%;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.chat-interface h2 {
+    margin-bottom: 15px;
+    color: #595959;
+}
+
+.chat-inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #595959;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f0f4f8;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+.logo-title {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.chat-history {
+    margin: 1rem 0 0 0;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.chat-message {
+    margin-bottom: 2rem;
+}
+
+.user-message, .bot-response {
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.user-message {
+    background-color: #595959;
+    color: #ffffff;
+    align-self: flex-start;
+    margin-bottom: 1.5rem;
+    justify-content: flex-end;
+}
+
+.bot-response {
+    color: #595959;
+    align-self: flex-end;
+    margin-bottom: 1.5rem;
+}
+
+.chat-bot-role, .chat-bot-message {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffbc42;
+}
+
+.role-value, .message-value {
+    line-height: 1.8;
+}
+
+.message {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.message-content {
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 80%;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.bot-message {
+    justify-content: flex-start;
+}
+
+.user-message .message-content {
+    background-color: #dfe6e9;
+}
+
+.message-content p {
+    margin: 0;
+}
+
+.avatar {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: top;
+    padding: 0.1rem;
+}
+
+.bot-response {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.bot-response-value {
+    display: flex;
+    align-items: center;
+    line-height: 1.8;
+}
+
+.textarea-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+#message {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.send-btn {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 0.5rem;
+    background-color: #595959;
+    color: white;
+    border: 1px solid #595959;
+    border-radius: 50%;
+    padding: 0.5rem;
+    cursor: pointer;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.send-btn:hover {
+    background-color: #ffffff;
+    color: #595959;
+}

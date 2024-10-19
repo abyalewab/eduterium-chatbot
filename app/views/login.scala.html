@@ -1,0 +1,43 @@
+@(message: String)
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="@routes.Assets.versioned("stylesheets/login.css")">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="@routes.Assets.versioned("javascripts/login.js")"></script>
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-content">
+        <div class="left-section">
+          <div class="logo-container">
+            <img src="@routes.Assets.versioned("images/eduterium_logo.jpeg")" alt="App Logo">
+          </div>
+        </div>
+
+        <div class="right-section">
+          <h1>Eduterium ChatBot</h1>
+          <form id="login-form" method="post" action="@routes.LoginController.login()">
+            <div class="input-group">
+              <input type="text" id="username" name="username" placeholder="Username" required>
+              <span class="error" id="username-error"></span>
+            </div>
+
+            <div class="input-group">
+              <input type="password" id="password" name="password" placeholder="Password" required>
+              <span class="error" id="password-error"></span>
+            </div>
+
+            <div>
+              <button type="submit" class="login-btn">LOGIN</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
